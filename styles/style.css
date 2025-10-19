@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #333;
+    --accent-color: #fff;
+    --bg-color: #f8f9fa;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --hover-color: #d1971a;
+    --signup-color: #bcc50e;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+
+/*----------- header section css---------------------------- */
+
+header {
+    background-color: var(--accent-color);
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    z-index: 999991;
+}
+
+header .logo {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+header .logo:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+header nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    gap: 20px;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+
+/*------------ hero section css------------------------------- */
+
+.hero {
+
+    display: flex;
+    align-items: center;
+    padding: 100px 100px;
+    text-align: left;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--primary-color);
+
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+}
+
+
+/*--- for animation h1---  */
+.animated-title span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.animated-title span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animated-title span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.animated-title span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.animated-title span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.animated-title span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.animated-title span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.animated-title span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.animated-title span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.animated-title span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.animated-title span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+
+/* Continue incrementing for each letter */
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0.5);
+    }
+}
+
+
+.hero-content p {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 450px;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/*----------- feature section css----------------------------  */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 100px;
+    text-align: center;
+
+}
+
+.feature {
+    background-color: var(--accent-color);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: translateY(-30px);
+}
+
+.feature i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/*-------------- pricing section css--------------------------- */
+
+.pricing-table h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.plan {
+    background-color: var(--accent-color);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.plan:hover {
+    transform: translateY(-30px);
+}
+
+.plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.plan p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin: 20px 0;
+}
+
+.plan .price {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.plan .btn {
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.plan .btn:hover {
+    background-color: var(--hover-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.text-green {
+    color: var(--success-color);
+
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/*------------ footer section css------------------------------  */
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    gap: 10px;
+}
